@@ -1,24 +1,49 @@
 {
-  "name": "forfeater",
+  "name": "typescrpit-node",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./dist/server"
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server --env.mode development --open",
+    "dev": "npm run webpack-dev-server",
+    "build:dev": "npm run webpack -- --env.mode development",
+    "build:prod": "npm run webpack -- --env.mode production",
+    "serve": "node dist/index.js"
   },
   "dependencies": {
+    "@types/compression": "0.0.36",
+    "@types/dotenv": "^4.0.3",
+    "@types/errorhandler": "0.0.32",
     "@types/es6-shim": "^0.31.37",
     "@types/express": "^4.16.0",
+    "@types/morgan": "^1.7.35",
+    "clean-webpack-plugin": "^0.1.19",
+    "compression": "^1.7.3",
+    "compression-webpack-plugin": "^1.1.11",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "dotenv": "^6.0.0",
+    "errorhandler": "^1.5.0",
     "express": "^4.16.3",
+    "express-validator": "^5.3.0",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
+    "jshint-loader": "^0.8.4",
+    "morgan": "^1.9.0",
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",
     "pug": "2.0.0-beta11",
     "reflect-metadata": "^0.1.12",
     "sequelize": "^4.38.0",
-    "sequelize-typescript": "^0.6.5"
+    "sequelize-typescript": "^0.6.5",
+    "source-map-loader": "^0.2.3",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack-cli": "^3.1.0",
+    "webpack-merge": "^4.1.3"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.7",
+    "webpack": "^4.16.2"
   }
 }
